@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'zbekiston Travel - Rasmiy turizm sayti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uzbek-blue': '#1e40af',
+                        'uzbek-green': '#059669',
+                        'uzbek-gold': '#d97706'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <!-- Top Bar -->
+        <div class="bg-uzbek-blue text-white py-2">
+            <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+                <div class="flex items-center space-x-4">
+                    <span><i class="fas fa-phone mr-2"></i>+998 99 444 11 90</span>
+                    <span><i class="fas fa-clock mr-2"></i>Ish vaqti: 9:00-18:00, Dushanba-Juma</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button data-lang="uz" class="hover:bg-blue-700 px-2 py-1 rounded">UZB</button>
+                    <button data-lang="en" class="hover:bg-blue-700 px-2 py-1 rounded">ENG</button>
+                    <button data-lang="ru" class="hover:bg-blue-700 px-2 py-1 rounded">RUS</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-8">
+                    <h1 class="text-2xl font-bold text-uzbek-blue" data-i18n="site_title">O'zbekiston Travel</h1>
+                    <div class="hidden lg:flex space-x-6">
+                        <a href="index.html" class="hover:text-uzbek-blue" data-i18n="nav_home">Bosh sahifa</a>
+                        <a href="tanavvul.html" class="hover:text-uzbek-blue" data-i18n="nav_food">Tanavul uchun</a>
+                        <a href="diqqatga sazovorjoylar.html" class="hover:text-uzbek-blue" data-i18n="nav_sights">Diqqatga sazovor joylar</a>
+                        <a href="foto galeriya qo'shish.html" class="hover:text-uzbek-blue" data-i18n="nav_gallery">Foto va Video</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-uzbek-blue">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="index.html" class="block hover:text-uzbek-blue py-2" data-i18n="nav_home">Bosh sahifa</a>
+                <a href="tanavvul.html" class="block hover:text-uzbek-blue py-2" data-i18n="nav_food">Tanavul uchun</a>
+                <a href="diqqatga sazovorjoylar.html" class="block hover:text-uzbek-blue py-2" data-i18n="nav_sights">Diqqatga sazovor joylar</a>
+                <a href="foto galeriya qo'shish.html" class="block hover:text-uzbek-blue py-2" data-i18n="nav_gallery">Foto va Video</a>
+            </div>
+        </div>
+  </header>
+
+    <!-- Hero Section -->
+    <section class=" text-gray-800"  style="background-image: url('img/uzbekistansam.jpg');">
+        <div class="absolute inset-0 h-[600px] opacity-40"></div>
+        <div class="relative container mx-auto px-4 h-full flex items-center">
+            <div class="max-w-2xl">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4" data-i18n="hero_title">O'zbekistonni o'zingiz uchun kashf eting!</h1>
+                <p class="text-xl mb-8" data-i18n="hero_subtitle">Sharqning sirli mamlakatida tarixlar afsonalarda to'plangan, quyosh yil bo'yi porlab, tabiatning betakrorligi va odamlarning yuraklari tozaligi buning nishonasidir</p>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">O'zbekistonning asosiy yo'nalishlari</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Tabiat -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-mountain text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Tabiat</h3>
+                        <p class="text-gray-600 mb-4">Xushmanzara tog'lar, gullagan vodiylar, jazirama cho'llar, daryolar va zilol ko'llar</p>
+                        <button class="text-uzbek-blue font-semibold hover:underline">Batafsil</button>
+                    </div>
+                </div>
+
+                <!-- O'zbek taomlari -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 flex items-center justify-center">
+                        <i class="fas fa-utensils text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">O'zbek taomlari</h3>
+                        <p class="text-gray-600 mb-4">Xushbo'y palov, qozon kabob, somsa, yopgan non va sho'rva</p>
+                        <button class="text-uzbek-blue font-semibold hover:underline">Batafsil</button>
+                    </div>
+                </div>
+
+                <!-- Me'morchilik -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-mosque text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Me'morchilik</h3>
+                        <p class="text-gray-600 mb-4">Moviy rang naqshlar va rang-barang rasmlar bilan bezatilgan ulug'vor me'moriy ansambllar</p>
+                        <button class="text-uzbek-blue font-semibold hover:underline">Batafsil</button>
+                    </div>
+                </div>
+
+                <!-- Madaniy meros -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-landmark text-6xl text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3 text-gray-800">Madaniy meros</h3>
+                        <p class="text-gray-600 mb-4">O'zbekiston madaniyati, Markaziy Osiyo xalqlarining ko'p asrlik an'analari</p>
+                        <button class="text-uzbek-blue font-semibold hover:underline">Batafsil</button>
+                    </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+    <!-- Cities Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">O'zbekiston shaharlari</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Toshkent -->
+                <div class="rounded-lg bg-cover" style="  background-image: url('img/Toshkent2.png');" >
+                    <div class="h-48  from-gray-400 to-gray-600 relative">
+                        <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Toshkent</h3>
+                            <p class="text-sm">Zamonaviy megapolis</p>
+                        </div>
+                    </div>
+                </div>
+
+                                <!-- Samarqand -->
+                <div class="rounded-lg bg-cover" style="  background-image: url('img/samarqand.jpg');" >
+                    <div class="h-48  from-gray-400 to-gray-600 relative">
+                        <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Samarqand</h3>
+                            <p class="text-sm">madaniyatlar chorrahasi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buxoro -->
+                <div class="rounded-lg bg-cover" style="  background-image: url('img/Buxoro.webp');" >
+                    <div class="h-48  from-gray-400 to-gray-600 relative">
+                        <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Buxoro</h3>
+                            <p class="text-sm">Islom madaniyati poytaxti</p>
+                        </div>
+                    </div>
+                </div>    
+
+                <!-- Xiva -->
+                <div class="rounded-lg bg-cover" style="  background-image: url('img/Xiva.jpg');" >
+                    <div class="h-48  from-gray-400 to-gray-600 relative">
+                        <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Xiva</h3>
+                            <p class="text-sm">Turk dunyosining poytaxti</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shahrisabz -->
+                 <div class="rounded-lg bg-cover" style="  background-image: url('img/Shaxrisabz.png');" >
+                    <div class="h-48  from-gray-400 to-gray-600 relative">
+                        <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Shahrisabz</h3>
+                            <p class="text-sm">Amir Temurniy vatani</p>
+                        </div>
+                    </div>
+                </div> 
+
+                <!-- Termiz -->
+                <div class="rounded-lg bg-cover" style="  background-image: url('img/Termiz.jpg');" >
+                    <div class="h-48  from-gray-400 to-gray-600 relative">
+                        <div class="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h3 class="text-xl font-bold">Termiz</h3>
+                            <p class="text-sm">Qadimgi svilizatsiya markazi</p>
+                        </div>
+                    </div>
+                </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Tourism Types Section -->
+    <section class="py-16 bg-white ml-4">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Turizm hamma uchun</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                <div class="text-center p-4 rounded-lg hover:bg-gray-50 transition">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-running text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Sport turizmi</h3>
+                </div>
+
+                <div class="text-center p-4 rounded-lg hover:bg-gray-50 transition">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-users text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Etnik turizm</h3>
+                </div>
+
+                <div class="text-center p-4 rounded-lg hover:bg-gray-50 transition">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-graduate text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Yoshlar turizmi</h3>
+                </div>
+
+                <div class="text-center p-4 rounded-lg hover:bg-gray-50 transition">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Ekoturizm</h3>
+                </div>
+
+                <div class="text-center p-4 rounded-lg hover:bg-gray-50 transition">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-utensils text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Gastronomik turizm</h3>
+                </div>
+
+                <div class="text-center p-4 rounded-lg hover:bg-gray-50 transition">
+                    <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-heartbeat text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="font-semibold text-gray-800">Tibbiy turizm</h3>
+                </div>
+            </div>
+    </div>
+  </section>
+
+        </div>
+  </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 mt-10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Turistlarga🏞</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-uzbek-gold">Ko'p beriladigan savollar</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Ichki turizm</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Gid-ekskursiya yetakchilari</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Tadbirlar taqvimi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Agentliklarga💺</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-uzbek-gold">Xalqaro ko'rgazmalar</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Turlarni targ'ib qilish</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Turizm sohasidagi qonunlar</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Turistik marshrutlar</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Ma'lumotlar📝</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-uzbek-gold">Biz haqimizda</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Sayyohlarning kelishi</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Reyting</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Mukofotlar</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Aloqa📞</h3>
+                    <div class="space-y-2">
+                        <p><i class="fas fa-phone mr-2"></i>+998 71 200 00 88</p>
+                        <p><i class="fas fa-clock mr-2"></i>Ish vaqti: 9:00-18:00, Dushanba-Juma</p>
+                        <p><i class="fas fa-envelope mr-2"></i>info@nationalprcentre.com</p>
+                        <p><i class="fas fa-map-marker-alt mr-2"></i>100015, Toshkent sh, Oybek ko'chasi 18-uy</p>
+                    </div>
+                </div>
+ </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>Xavfsiz turizm uchun yagona Call-markaz - 1173</p>
+                <p class="mt-2 text-gray-400">Copyright © 2018-2025 National PR-centre</p>
+      </div>
+    </div>
+  </footer>
+
+    <script src="app.js"></script>
+    
+    <!-- Mobile Menu JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Language switching is now handled by app.js
+    </script>
+</body>
+</html>

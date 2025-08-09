@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O'zbekiston Travel - Rasmiy turizm sayti</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uzbek-blue': '#1e40af',
+                        'uzbek-green': '#059669',
+                        'uzbek-gold': '#d97706'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <!-- Top Bar -->
+        <div class="bg-uzbek-blue text-white py-2">
+            <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+                <div class="flex items-center space-x-4">
+                    <span><i class="fas fa-phone mr-2"></i>+998 99 444 11 90</span>
+                    <span><i class="fas fa-clock mr-2"></i>Ish vaqti: 9:00-18:00, Dushanba-Juma</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button class="hover:bg-blue-700 px-2 py-1 rounded">UZB</button>
+                    <button class="hover:bg-blue-700 px-2 py-1 rounded">ENG</button>
+                    <button class="hover:bg-blue-700 px-2 py-1 rounded">RUS</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-8 " >
+                    <h1 class="text-2xl font-bold text-white">O'zbekiston Travel</h1>
+                    <div class="hidden lg:flex space-x-6">
+                        <a href="index.html" class="hover:text-uzbek-blue">Tanalvul  uchun</a>
+                        <a href="diqqatga sazovorjoylar.html" class="hover:text-uzbek-blue">Diqqatga sazovor joylar</a>
+                        <a href="foto galeriya qo'shish.html" class="hover:text-uzbek-blue">Foto va Video</a>
+                    </div>
+                </div>
+              
+            </div>
+    </nav>
+
+  <!-- Hero Section -->
+
+  <section class="relative bg-black h-screen bg-cover bg-center" style="background-image: url('img/milliytaom.webp'); ">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center py-10 px-6">
+      <div class="flex-1 space-y-6">
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+          <span class="text-white">Milliy</span><br>
+          <span class="text-white">Hayron qoldiruvchan</span><br>
+          <span class="text-yellow-400">Tomlar</span>
+        </h1>
+        <div class="flex items-center space-x-4 pt-4">
+          <span class="text-sm text-gray-300">+998 91 701 73 20</span>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+ <div>
+<h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-weight: 600;" class="text-5xl text-center mt-5 mb-5">Lazzatli yemak uchun oshxona</h1>
+ </div>
+<div   >
+    <!-- Online Order Section -->
+    <section class="max-w-7xl mx-auto grid md:grid-cols-2 gap-8 py-10 px-6 h-[600px] relative bg-black bg-cover bg-center" style="background-image: url('img/oshxona.webp');">
+      <div class="bg-yellow-400 rounded-xl p-6 flex flex-col justify-between min-h-[260px]">
+        <div>
+          <h2 class="text-3xl font-extrabold text-black mb-2">Siz istagan tam</h2>
+          <div class="bg-white rounded-lg overflow-hidden mb-2">
+            <!-- Menu image -->
+            <img src="img/osh.webp" alt="Menu" class="w-full h-30 object-cover">
+          </div>
+          <p class="text-black font-semibold">Aniq sizga yoqadi<br><span class="text-gray-700">tamiga gapbo'lishi mumkin emas</span></p>
+        </div>
+        <div class="mt-4">
+          <span class="text-4xl font-extrabold text-yellow-900 opacity-30">Mazasi🆗</span>
+        </div>
+      </div>
+      
+      <div class="flex flex-col justify-between">
+        
+        <div>
+          <span class="text-5xl font-extrabold text-yellow-400 opacity-60">sevimli tam</span>
+        </div>
+      </div>
+    </section>
+  
+  
+
+  <!-- Map Section -->
+  <section class="max-w-7xl mx-auto py-10 px-6">
+    <h2 class="text-2xl font-extrabold mb-4 text-yellow-400">Xəritəyə Baxmaq</h2>
+    <div class="rounded-xl overflow-hidden shadow-lg">
+      <!-- Map image -->
+      <img src="img/dd45e370a89905c78fd2f9926d0e59db56724630.png" alt="Map" class="w-full h-72 object-cover">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 mt-10">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Turistlarga🏞</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-uzbek-gold">Ko'p beriladigan savollar</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Ichki turizm</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Gid-ekskursiya yetakchilari</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Tadbirlar taqvimi</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Agentliklarga💺</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-uzbek-gold">Xalqaro ko'rgazmalar</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Turlarni targ'ib qilish</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Turizm sohasidagi qonunlar</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Turistik marshrutlar</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Ma'lumotlar📝</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-uzbek-gold">Biz haqimizda</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Sayyohlarning kelishi</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Reyting</a></li>
+                    <li><a href="#" class="hover:text-uzbek-gold">Mukofotlar</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold mb-4">Aloqa📞</h3>
+                <div class="space-y-2">
+                    <p><i class="fas fa-phone mr-2"></i>+998 71 200 00 88</p>
+                    <p><i class="fas fa-clock mr-2"></i>Ish vaqti: 9:00-18:00, Dushanba-Juma</p>
+                    <p><i class="fas fa-envelope mr-2"></i>info@nationalprcentre.com</p>
+                    <p><i class="fas fa-map-marker-alt mr-2"></i>100015, Toshkent sh, Oybek ko'chasi 18-uy</p>
+                </div>
+            </div>
+</div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+            <p>Xavfsiz turizm uchun yagona Call-markaz - 1173</p>
+            <p class="mt-2 text-gray-400">Copyright © 2018-2025 National PR-centre</p>
+  </div>
+</div>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>

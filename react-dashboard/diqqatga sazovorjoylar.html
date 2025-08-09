@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diqqatga sazovor joylar - O'zbekiston Travel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uzbek-blue': '#1e40af',
+                        'uzbek-green': '#059669',
+                        'uzbek-gold': '#d97706'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <!-- Top Bar -->
+        <div class="bg-uzbek-blue text-white py-2">
+            <div class="container mx-auto px-4 flex justify-between items-center text-sm">
+                <div class="flex items-center space-x-4">
+                    <span><i class="fas fa-phone mr-2"></i>+998 99 444 11 90</span>
+                    <span><i class="fas fa-clock mr-2"></i>Ish vaqti: 9:00-18:00, Dushanba-Juma</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <button data-lang="uz" class="hover:bg-blue-700 px-2 py-1 rounded">UZB</button>
+                    <button data-lang="en" class="hover:bg-blue-700 px-2 py-1 rounded">ENG</button>
+                    <button data-lang="ru" class="hover:bg-blue-700 px-2 py-1 rounded">RUS</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-8">
+                    <h1 class="text-2xl font-bold text-uzbek-blue" data-i18n="site_title">O'zbekiston Travel</h1>
+                    <div class="hidden lg:flex space-x-6">
+                        <a href="index.html" class="hover:text-uzbek-blue" data-i18n="nav_home">Bosh sahifa</a>
+                        <a href="tanavvul.html" class="hover:text-uzbek-blue" data-i18n="nav_food">Tanavul uchun</a>
+                        <a href="diqqatga sazovorjoylar.html" class="text-uzbek-blue font-semibold" data-i18n="nav_sights">Diqqatga sazovor joylar</a>
+                        <a href="foto galeriya qo'shish.html" class="hover:text-uzbek-blue" data-i18n="nav_gallery">Foto va Video</a>
+                    </div>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-uzbek-blue">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-4 space-y-4">
+                <a href="index.html" class="block hover:text-uzbek-blue py-2" data-i18n="nav_home">Bosh sahifa</a>
+                <a href="tanavvul.html" class="block hover:text-uzbek-blue py-2" data-i18n="nav_food">Tanavul uchun</a>
+                <a href="diqqatga sazovorjoylar.html" class="block text-uzbek-blue font-semibold py-2" data-i18n="nav_sights">Diqqatga sazovor joylar</a>
+                <a href="foto galeriya qo'shish.html" class="block hover:text-uzbek-blue py-2" data-i18n="nav_gallery">Foto va Video</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="bg-gray-100 py-4">
+        <div class="container mx-auto px-4">
+            <nav class="text-sm text-gray-600">
+                <a href="index.html" class="hover:text-uzbek-blue">Bosh sahifa</a>
+                <span class="mx-2">/</span>
+                <span class="text-uzbek-blue font-semibold">Diqqatga sazovor joylar</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="py-16 bg-gradient-to-r from-uzbek-blue to-blue-600 text-white bg-cover bg-center w-full h-[460px]" style="background-image: url('img/diqqatga sazovor.jpg');">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-i18n="main_title">Diqqatga sazovor joylar</h1>
+            <p class="text-xl max-w-3xl mx-auto" data-i18n="main_subtitle">O'zbekistondagi eng chiroyli va tarixiy joylarni kashf eting. Har bir joy o'ziga xos tarix va madaniyatga ega.</p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800" data-i18n="sections_title">Bo'limlar</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-mosque text-4xl text-uzbek-blue mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2" data-i18n="section_ziyorat">Ziyorat turizm obyektlari</h3>
+                    <p class="text-sm text-gray-600" data-i18n="section_ziyorat_desc">Diniy joylar va ziyoratgohlar</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-landmark text-4xl text-uzbek-green mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Tarixiy-me'moriy obyektlar</h3>
+                    <p class="text-sm text-gray-600">Qadimiy binolar va me'moriy ansambllar</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-user-tie text-4xl text-uzbek-gold mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Buyuk insonlar</h3>
+                    <p class="text-sm text-gray-600">Tarixiy shaxslar va ularning yodgorliklari</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-palette text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">San'at galereyasi</h3>
+                    <p class="text-sm text-gray-600">Badiiy galereyalar va muzeylar</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-tree text-4xl text-green-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Shahar bog'lari</h3>
+                    <p class="text-sm text-gray-600">Dam olish va ko'ngil ochar joylar</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-mountain text-4xl text-indigo-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">O'zbekiston vodiylari</h3>
+                    <p class="text-sm text-gray-600">Tabiatning chiroyli joylari</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-question-circle text-4xl text-red-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Sirli O'zbekiston</h3>
+                    <p class="text-sm text-gray-600">Afsonalar va sirlar</p>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+                    <i class="fas fa-spa text-4xl text-pink-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Dam olish maskanlari</h3>
+                    <p class="text-sm text-gray-600">Sanatoriyalar va dam olish joylari</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Attractions Preview -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800" data-i18n="famous_places">Eng mashhur joylar</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class=" bg-cover h-48 bg-gradient-to-br from-amber-400 to-amber-600 relative" style="  background-image: url('img/regiton.jpeg');" >
+                        <div class="absolute inset-0 bg-black opacity-30"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="text-lg font-bold">Registon maydoni</h4>
+                            <p class="text-sm">Samarqand</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Sharq me'morchiligining durdonasi</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48  bg-cover bg-gradient-to-br from-yellow-400 to-yellow-600 relative" style="  background-image: url('img/poyi\ kalon.png');">
+                        <div class="absolute inset-0 bg-black opacity-30"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="text-lg font-bold">Poyi Kalon</h4>
+                            <p class="text-sm">Buxoro</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">Buxoro ramzi</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <div class="h-48 bg-cover bg-gradient-to-br from-red-400 to-red-600 relative" style="  background-image: url('img/ichan\ qala.avif');">
+                        <div class="absolute inset-0 bg-black opacity-30"></div>
+                        <div class="absolute bottom-4 left-4 text-white">
+                            <h4 class="text-lg font-bold">Ichan Qal'a</h4>
+                            <p class="text-sm">Xiva</p>
+                        </div>
+                    </div>
+                    <div class="p-4">
+                        <p class="text-gray-600 text-sm">UNESCO ro'yxatiga kiritilgan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Navigation -->
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Shaharlar bo'yicha tezkor navigatsiya</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition text-center">
+                    <i class="fas fa-city text-4xl text-uzbek-blue mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Toshkent</h3>
+                    <p class="text-sm text-gray-600 mb-4">Zamonaviy poytaxt</p>
+                   
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition text-center">
+                    <i class="fas fa-mosque text-4xl text-uzbek-green mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Samarqand</h3>
+                    <p class="text-sm text-gray-600 mb-4">Madaniyatlar chorrahasi</p>
+                   
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition text-center">
+                    <i class="fas fa-landmark text-4xl text-uzbek-gold mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Buxoro</h3>
+                    <p class="text-sm text-gray-600 mb-4">Islom madaniyatining poytaxti</p>
+                   
+                </div>
+
+                <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition text-center">
+                    <i class="fas fa-fort-awesome text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-800 mb-2">Xiva</h3>
+                    <p class="text-sm text-gray-600 mb-4">Turk dunyosining poytaxti</p>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Attractions Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Asosiy diqqatga sazovor joylar</h2>
+            
+            <!-- Toshkent Attractions -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-8 text-uzbek-blue border-b-2 border-uzbek-blue pb-2">Toshkent</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-cover bg-gradient-to-br from-blue-400 to-blue-600 relative" style="  background-image: url('img/Hazratdovud.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Xazrati Dovud g'ori</h4>
+                                <p class="text-sm">1303 zina</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Toshkentdagi eng qadimiy ziyoratgohlardan biri</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-cover bg-gradient-to-br from-green-400 to-green-600 relative" style="  background-image: url('img/doruttilovot.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Dorut Tilovat majmuasi</h4>
+                                <p class="text-sm">Muqaddas qur'on o'qiladigan joy</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Islom madaniyatining muhim markazi</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 relative bg-cover" style="  background-image: url('img/shayxontoxurasambli.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Shayxontohur me'moriy ansambli</h4>
+                                <p class="text-sm">Tarixiy me'moriy yodgorlik</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">O'zbekiston me'morchiligining durdonalari</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 relative bg-cover" style="  background-image: url('img/chorsu-art-galery.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Chorsu Art-galereyasi</h4>
+                                <p class="text-sm">Zamonaviy san'at markazi</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Zamonaviy san'at va madaniyat</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 relative bg-cover"  style="  background-image: url('img/AlisherNteatri.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Alisher Navoiy nomidagi Katta teatr</h4>
+                                <p class="text-sm">Opera va balet teatri</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">O'zbekiston madaniyatining markazi</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 relative bg-cover" style="  background-image: url('img/mustaqillikmaydoni.png');" >
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Mustaqillik maydoni</h4>
+                                <p class="text-sm">Toshkentning markaziy maydoni</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Mustaqillik va erkinlik timsoli</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Samarqand Attractions -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-8 text-uzbek-blue border-b-2 border-uzbek-blue pb-2">Samarqand</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-amber-400 to-amber-600 relative bg-cover" style="  background-image: url('img/regiton.jpeg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Registon maydoni</h4>
+                                <p class="text-sm">Madrasalar ansambli</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Sharq me'morchiligining durdonasi</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-teal-400 to-teal-600 relative bg-cover" style="  background-image: url('img/bibxonimmasjidi.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Bibi-Xonim masjidi</h4>
+                                <p class="text-sm">Ulug'vor masjid</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Amir Temur davri me'morchiligi</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-orange-400 to-orange-600 relative" style="  background-image: url('img/shohiZinda.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Shohi Zinda</h4>
+                                <p class="text-sm">Maqbaralar ko'chasi</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Qadimiy maqbaralar majmuasi</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buxoro Attractions -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-8 text-uzbek-blue border-b-2 border-uzbek-blue pb-2">Buxoro</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 relative bg-cover" style="  background-image: url('img/poyi\ kalon.png');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Poyi Kalon</h4>
+                                <p class="text-sm">Masjid va minoralar ansambli</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Buxoro ramzi</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 relative bg-cover" style="  background-image: url('img/sitoraimohi.png');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Sitorai Mohi Xosa</h4>
+                                <p class="text-sm">Amir saroyi</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Buxoro amirining qarorgohi</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 relative bg-cover" style="  background-image: url('img/LAbihovuz.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Labi Hovuz</h4>
+                                <p class="text-sm">Tarixiy maydon</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Buxoro qadimiy markazi</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Xiva Attractions -->
+            <div class="mb-12">
+                <h3 class="text-2xl font-bold mb-8 text-uzbek-blue border-b-2 border-uzbek-blue pb-2">Xiva</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-red-400 to-red-600 relative bg-cover" style="  background-image: url('img/ichan\ qala.avif');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Ichan Qal'a</h4>
+                                <p class="text-sm">Qadimiy shahar</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">UNESCO ro'yxatiga kiritilgan</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 relative bg-cover" style="  background-image: url('img/juma\ Masjidi.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Juma masjidi</h4>
+                                <p class="text-sm">Qadimiy masjid</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Xiva me'morchiligining durdonasi</p>
+        
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 relative bg-cover" style="  background-image: url('img/Xo\'ja_Nasriddin_Afandi.jpg');">
+                            <div class="absolute inset-0 bg-black opacity-30"></div>
+                            <div class="absolute bottom-4 left-4 text-white">
+                                <h4 class="text-lg font-bold">Xo'ja Nasriddin Afandi haykali</h4>
+                                <p class="text-sm">Afsonaviy qahramon</p>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <p class="text-gray-600 mb-4">Xalq qahramoni</p>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <!-- <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Qidiruv va filtrlash</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Viloyat</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-uzbek-blue focus:border-transparent">
+                            <option>Barcha viloyatlar</option>
+                            <option>Toshkent</option>
+                            <option>Samarqand</option>
+                            <option>Buxoro</option>
+                            <option>Xiva</option>
+                            <option>Farg'ona</option>
+                            <option>Andijon</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Kategoriya</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-uzbek-blue focus:border-transparent">
+                            <option>Barcha kategoriyalar</option>
+                            <option>Masjidlar</option>
+                            <option>Madrasalar</option>
+                            <option>Muzeylar</option>
+                            <option>Bog'lar</option>
+                            <option>Maqbaralar</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Qidiruv</label>
+                        <input type="text" placeholder="Joy nomini kiriting..." class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-uzbek-blue focus:border-transparent">
+                    </div>
+                </div>
+              
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Turistlarga🏞</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-uzbek-gold">Ko'p beriladigan savollar</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Ichki turizm</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Gid-ekskursiya yetakchilari</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Tadbirlar taqvimi</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Agentliklarga💺</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-uzbek-gold">Xalqaro ko'rgazmalar</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Turlarni targ'ib qilish</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Turizm sohasidagi qonunlar</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Turistik marshrutlar</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Ma'lumotlar📝</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-uzbek-gold">Biz haqimizda</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Sayyohlarning kelishi</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold">Reyting</a></li>
+                        <li><a href="#" class="hover:text-uzbek-gold

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'uzbek-blue': '#1e40af',
+                        'uzbek-green': '#059669',
+                        'uzbek-gold': '#d97706'
+                    }
+                }
+            }
+        }
+    </script>
+
+      <!-- Main Navigation -->
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+            <div class="flex items-center space-x-8">
+                <h1 class="text-2xl font-bold text-uzbek-blue">O'zbekiston Travel</h1>
+                <div class="hidden lg:flex space-x-6">
+                    <a href="tanavvul.html" class="hover:text-uzbek-blue">Tanalvul uchun</a>
+                    <a href="diqqatga sazovorjoylar.html" class="hover:text-uzbek-blue">Diqqatga sazovor joylar</a>
+                    <a href="index.html" class="hover:text-uzbek-blue">Foto va Video</a>
+                </div>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="lg:hidden" id="mobile-menu-btn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+       <!-- Photo Gallery Section -->
+       <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Fotogalereya</h2>
+            
+            <!-- Gallery Action Buttons -->
+            <div class="flex justify-center space-x-4 mb-8">
+                <button onclick="photoGallery.openGallery()" class="bg-uzbek-blue text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition flex items-center">
+                    <i class="fas fa-camera mr-2"></i>Foto Galereya
+                </button>
+                <button onclick="photoGallery.openGallery()" class="bg-uzbek-green text-white px-6 py-3 rounded-lg hover:bg-green-700 transition flex items-center">
+                    <i class="fas fa-video mr-2"></i>Video Galereya
+                </button>
+            </div>
+</body>
+</html>
